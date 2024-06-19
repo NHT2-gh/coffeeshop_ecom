@@ -28,7 +28,7 @@ const AdminOrderDetail = () => {
   const handleCancelOrder = async () => {
     try {
       const token = localStorage.getItem("token");
-      axios.put(`http://localhost:9999/api/admin/order/${id}/status`, { status: 5 }, {
+      axios.put(`http://localhost:8081/api/admin/order/${id}/status`, { status: 5 }, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -44,7 +44,7 @@ const AdminOrderDetail = () => {
       const token = localStorage.getItem("token");
       const currentStatus = orderDetail?.status;
       const newStatus = currentStatus + 1;
-      axios.put(`http://localhost:9999/api/admin/order/${id}/status`, { status: newStatus }, {
+      axios.put(`http://localhost:8081/api/admin/order/${id}/status`, { status: newStatus }, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

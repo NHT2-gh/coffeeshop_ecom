@@ -55,7 +55,7 @@ const CustomerProfile = () => {
   const handleSave = async () => {
 
     try {
-      const response = await axios.put(`http://localhost:9999/api/customer/${user.user.user_id}/update`, formData, {
+      const response = await axios.put(`http://localhost:8081/api/customer/${user.user.user_id}/update`, formData, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

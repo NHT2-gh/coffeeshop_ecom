@@ -35,7 +35,7 @@ const AllCategory = () => {
   const handleAddCategory = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.post('http://localhost:9999/api/admin/category/add', {
+      const response = await axios.post('http://localhost:8081/api/admin/category/add', {
         category_name: newCategoryName
       }, {
         headers: {
@@ -73,7 +73,7 @@ const AllCategory = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await axios.put(`http://localhost:9999/api/admin/category/${categoryId}/update`, {
+      const response = await axios.put(`http://localhost:8081/api/admin/category/${categoryId}/update`, {
         category_name: newCategoryName
       }, {
         headers: {
@@ -102,7 +102,7 @@ const AllCategory = () => {
     if (confirmDelete) {
       try {
 
-        await axios.put(`http://localhost:9999/api/admin/category/${categoryId}/delete`, null, {
+        await axios.put(`http://localhost:8081/api/admin/category/${categoryId}/delete`, null, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

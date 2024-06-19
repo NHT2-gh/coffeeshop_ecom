@@ -15,7 +15,7 @@ function* getProductDetailSaga(action) {
 
     const token = localStorage.getItem('token');
 
-    const response = yield call(axios.get, `http://localhost:9999/api/admin/product/find/${id}`, {
+    const response = yield call(axios.get, `http://localhost:8081/api/admin/product/find/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`
       }

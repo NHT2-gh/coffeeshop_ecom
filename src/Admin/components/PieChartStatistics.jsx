@@ -12,7 +12,7 @@ const PieChartStatistics = () => {
     async function fetchMostSoldProducts() {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:9999/api/admin/statistic/product', {
+        const response = await axios.get('http://localhost:8081/api/admin/statistic/product', {
           headers: {
             Authorization: `Bearer ${token}`
           }

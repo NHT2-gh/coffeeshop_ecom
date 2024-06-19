@@ -13,7 +13,7 @@ function* getAllProductsCustomerSaga() {
   try {
     const token = localStorage.getItem('token');
 
-    const response = yield call(axios.get, 'http://localhost:9999/api/product/all', {
+    const response = yield call(axios.get, 'http://localhost:8081/api/product/all', {
       headers: {
         Authorization: `Bearer ${token}`
       }

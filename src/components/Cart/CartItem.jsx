@@ -9,7 +9,7 @@ const CartItem = ({ cart, onQuantityChange, onDeleteSuccess }) => {
   const handleQuantityChange = async (newQuantity) => {
     if (newQuantity >= 1) {
       try {
-        const apiUrl = 'http://localhost:9999/api/cart/update/quantity';
+        const apiUrl = 'http://localhost:8081/api/cart/update/quantity';
         const requestBody = {
           product_id: product?.product_id,
           size: size,
@@ -35,7 +35,7 @@ const CartItem = ({ cart, onQuantityChange, onDeleteSuccess }) => {
 
   const handleDelete = async () => {
     try {
-      const apiUrl = 'http://localhost:9999/api/cart/delete/item';
+      const apiUrl = 'http://localhost:8081/api/cart/delete/item';
       const requestBody = {
         product_id: product?.product_id,
         size: size

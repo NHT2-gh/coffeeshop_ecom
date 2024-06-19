@@ -5,7 +5,7 @@ function* addProduct(action) {
   try {
     const token = localStorage.getItem('token');
 
-    const response = yield call(axios.post, 'http://localhost:9999/api/admin/product/add', action.payload, {
+    const response = yield call(axios.post, 'http://localhost:8081/api/admin/product/add', action.payload, {
       headers: {
         'Content-Type': 'multipart/form-data',
         'Authorization': `Bearer ${token}`,

@@ -7,7 +7,7 @@ function* updateProduct(action) {
 
     const token = localStorage.getItem('token');
 
-    const response = yield call(axios.put, `http://localhost:9999/api/admin/product/${id}/update`, formData, {
+    const response = yield call(axios.put, `http://localhost:8081/api/admin/product/${id}/update`, formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
         'Authorization': `Bearer ${token}`,
