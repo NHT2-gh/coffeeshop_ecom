@@ -39,4 +39,4 @@ jobs:
             docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/e-com:latest
             docker stop coffee || true
             docker rm coffee || true
-            docker run -d --name coffee -e VIRTUAL_HOST=webinstagram.tech -e VIRTUAL_PORT=80 ${{ secrets.DOCKER_HUB_USERNAME }}/e-com:latest
+            docker run -d --name coffee -e VIRTUAL_HOST=nghiatrann.me -e VIRTUAL_PORT=80 ${{ secrets.DOCKER_HUB_USERNAME }}/e-com:latest
