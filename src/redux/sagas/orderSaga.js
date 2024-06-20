@@ -13,7 +13,7 @@ function* getAllOrdersSaga() {
   try {
     const token = localStorage.getItem('token');
 
-    const response = yield call(axios.get, 'http://localhost:8081/api/admin/order/all', {
+    const response = yield call(axios.get, 'http://18.139.114.240:5000/api/admin/order/all', {
       headers: {
         Authorization: `Bearer ${token}`
       }

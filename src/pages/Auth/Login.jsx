@@ -45,7 +45,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:8081/auth/signin', {
+      const response = await axios.post('http://18.139.114.240:5000/auth/signin', {
         username,
         password
       });
@@ -64,7 +64,7 @@ const Login = () => {
 
   const handleForgotPassword = async () => {
     try {
-      const response = await axios.get(`http://localhost:8081/auth/check/${username}`);
+      const response = await axios.get(`http://18.139.114.240:5000/auth/check/${username}`);
       console.log(response);
       if (response.data.code === 200) {
         handleSendOTP();
@@ -103,7 +103,7 @@ const Login = () => {
     }
 
     try {
-      await axios.put(`http://localhost:8081/auth/change/${username}`, {
+      await axios.put(`http://18.139.114.240:5000/auth/change/${username}`, {
         password: newPassword
       });
       console.log("Thay đổi mật khẩu thành công");

@@ -21,7 +21,7 @@ const OrderDetail = () => {
   const handleCancelOrder = async () => {
     try {
       const token = localStorage.getItem("token");
-      axios.put(`http://localhost:8081/api/admin/order/${id}/status`, { status: 5 }, {
+      axios.put(`http://18.139.114.240:5000/api/admin/order/${id}/status`, { status: 5 }, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

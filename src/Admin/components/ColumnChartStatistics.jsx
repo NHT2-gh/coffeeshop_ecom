@@ -9,7 +9,7 @@ const ColumnChartStatistics = () => {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch(`http://localhost:8081/api/admin/statistic/year?year=${selectedYear}`, {
+        const response = await fetch(`http://18.139.114.240:5000/api/admin/statistic/year?year=${selectedYear}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }

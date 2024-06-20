@@ -12,7 +12,7 @@ function* addCart(action) {
       size,
     };
 
-    const response = yield call(axios.put, 'http://localhost:8081/api/cart/add', body, {
+    const response = yield call(axios.put, 'http://18.139.114.240:5000/api/cart/add', body, {
       headers: {
         'Authorization': `Bearer ${token}`,
       }

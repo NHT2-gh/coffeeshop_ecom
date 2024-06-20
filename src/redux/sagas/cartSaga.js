@@ -8,7 +8,7 @@ function* getAllCartSaga() {
   try {
     const token = localStorage.getItem('token');
 
-    const response = yield call(axios.get, 'http://localhost:8081/api/cart/', {
+    const response = yield call(axios.get, 'http://18.139.114.240:5000/api/cart/', {
       headers: {
         Authorization: `Bearer ${token}`
       }

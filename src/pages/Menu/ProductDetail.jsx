@@ -35,7 +35,7 @@ const ProductDetail = () => {
         }
       };
 
-      const response = await axios.get(`http://localhost:8081/api/order/size/category?category_id=${category_id}`, config);
+      const response = await axios.get(`http://18.139.114.240:5000/api/order/size/category?category_id=${category_id}`, config);
       const data = response.data.data;
 
       setSizeData(data);

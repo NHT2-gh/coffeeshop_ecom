@@ -31,7 +31,7 @@ const AllProducts = () => {
     if (confirmDelete) {
       try {
 
-        await axios.delete(`http://localhost:8081/api/admin/product/${productId}/delete`, {
+        await axios.delete(`http://18.139.114.240:5000/api/admin/product/${productId}/delete`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

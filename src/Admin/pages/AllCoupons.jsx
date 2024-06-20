@@ -38,7 +38,7 @@ const AllCoupons = () => {
   //   if (confirmDelete) {
   //     try {
 
-  //       await axios.put(`http://localhost:8081/api/admin/coupon/${couponId}/delete`, null, {
+  //       await axios.put(`http://18.139.114.240:5000/api/admin/coupon/${couponId}/delete`, null, {
   //         headers: {
   //           Authorization: `Bearer ${token}`,
   //         },
